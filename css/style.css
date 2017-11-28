@@ -1,0 +1,96 @@
+/*****************************************************************************
+Universal style
+*****************************************************************************/
+
+body{
+  font-family: 'Raleway', sans-serif;
+}
+
+/*****************************************************************************
+Main Grid Style
+******************************************************************************/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 300vh;
+  width: 100vw;
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/******************************************************************************
+Splash Page Style
+******************************************************************************/
+
+.splash-page-container {
+  grid-column: 3 / 6;
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.splash-title {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+}
+
+.splash-title h1 {
+  font-weight: 500;
+}
+
+.splash-explanation {
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+}
+
+.splash-explanation h2 {
+  font-weight: 500;
+}
+
+.splash-links {
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
+}
+
+.splash-links ul {
+  display: flex;
+}
+
+.splash-links ul li {
+  border-right: 1px solid black;
+}
+
+.splash-links ul li:last-child {
+  border-right: 0;
+}
+
+.splash-links a {
+  text-decoration: none;
+  color: black;
+
+}
+
+
+/******************************************************************************
+Portfolio Page Style
+******************************************************************************/
+
+.portfolio-container {
+  grid-column: 2 / 7;
+  grid-row: 2 / 3;
+}
+
+/******************************************************************************
+Contact Page Style
+******************************************************************************/
+
+.contact-container {
+  grid-column: 2 / 7;
+  grid-row: 3 / 4;
+}
