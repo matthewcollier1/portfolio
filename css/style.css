@@ -33,24 +33,44 @@ Splash Page Style
   grid-template-rows: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
+  grid-row-gap: 20px;
+}
+
+.splash-page-icon {
+  grid-column: 7 / 8;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10%;
+}
+
+.splash-page-icon img {
+  height: 3em;
+  width: 3em;
 }
 
 .splash-title {
   grid-column: 1 / 4;
   grid-row: 1 / 2;
+  align-self: end;
 }
 
 .splash-title h1 {
   font-weight: 500;
+  font-size: 2em;
+  color: #685f5fb3;
 }
 
 .splash-explanation {
   grid-column: 1 / 4;
   grid-row: 2 / 3;
+  align-self: start;
+  text-align: center;
 }
 
 .splash-explanation h2 {
   font-weight: 500;
+  font-size: 1.5em;
+  color: #685f5fb3;
 }
 
 .splash-links {
@@ -63,7 +83,8 @@ Splash Page Style
 }
 
 .splash-links ul li {
-  border-right: 1px solid black;
+  border-right: 1px solid #685f5fb3;
+  padding: 20px;
 }
 
 .splash-links ul li:last-child {
@@ -72,7 +93,7 @@ Splash Page Style
 
 .splash-links a {
   text-decoration: none;
-  color: black;
+  color: #685f5fb3;
 
 }
 
