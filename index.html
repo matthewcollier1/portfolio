@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,700,800" rel="stylesheet">
     <title>Matthew Collier</title>
   </head>
   <body>
-
+    <div id="top-of-page"></div>
+    <a href="#top-of-page"><p id="scroll-to-top">Back To Top!</p></a>
     <div class="grid-container">
 
         <div class="splash-page-icon">
@@ -24,15 +26,15 @@
             </div>
             <div class="splash-links">
               <ul>
-                <li><a href="#">Bio</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about-me">Bio</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#find-me">Contact</a></li>
               </ul>
             </div>
         </div><!-- End splash-page  -->
 
         <div class="portfolio-container">
-            <div class="portfolio-title">
+            <div class="portfolio-title" id="portfolio">
               <h2>Portfolio</h2>
             </div>
             <div class="portfolio-boxes">
@@ -50,40 +52,54 @@
 
             <div class="portfolio-skills-left">
               <h2>Skills</h2>
-              <div class="skills-left-one skills-left">
-
-              </div>
-              <div class="skills-left-two skills-left">
-
-              </div>
-              <div class="skills-left-three skills-left">
-
-              </div>
-              <div class="skills-left-four skills-left">
-
-              </div>
+              <img src="images/skills.png" alt=""/>
             </div>
             <div class="portfolio-skills-right">
               <h2>More Skills</h2>
+              <img src="images/skills.png" alt=""/>
             </div>
 
         </div><!-- End portfolio -->
 
         <div class="contact-container">
-            <div class="contact-about">
-
+            <div class="contact-about" id="about-me">
+              <h2>About Me</h2>
             </div>
-            <div class="contact-find-me">
+            <div class="contact-about-box">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="contact-find-me" id="find-me">
+              <h2>Find Me</h2>
+            </div>
+            <div class="contact-find-me-box">
+              <div class="contact contact-github">
+                <p>Matthew</p>
+                <p><a href="http://github.com">Github</a></p>
+                <p>Collier</p>
+              </div>
+              <div class="contact contact-linkedin">
+                <p>Matthew</p>
+                <p><a href="http://linkedin.com">LinkedIn</a></p>
+                <p>Collier</p>
+              </div>
+              <div class="contact contact-instagram">
+                <p>Matthew</p>
+                <p><a href="http://instagram.com">Instagram</a></p>
+                <p>Collier</p>
+              </div>
 
             </div>
             <footer>
-
+              <h2>Footer</h2>
             </footer>
 
         </div> <!-- End contact -->
 
     </div><!-- End grid-container -->
 
+    <script  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
   <script src="js/style.js"> charset="utf-8"></script>
   </body>
 </html>

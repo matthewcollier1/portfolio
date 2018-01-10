@@ -6,6 +6,10 @@ body{
   font-family: 'Raleway', sans-serif;
 }
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 /*****************************************************************************
 Main Grid Style
 ******************************************************************************/
@@ -19,6 +23,25 @@ Main Grid Style
   background-image: url(../images/background.png);
   background-repeat: no-repeat;
   background-size: cover;
+
+}
+
+#top-of-page {
+  top: 0;
+}
+
+#scroll-to-top {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: #dcd7b6;
+  opacity: 0.5;
 }
 
 /******************************************************************************
@@ -46,6 +69,7 @@ Splash Page Style
 .splash-page-icon img {
   height: 3em;
   width: 3em;
+  position: fixed;
 }
 
 .splash-title {
@@ -136,6 +160,8 @@ Portfolio Page Style
   width: 80%;
   height: 80%;
   background-color: white;
+  display: flex;
+  justify-content: center;
 }
 
 .box-one {
@@ -153,14 +179,15 @@ Portfolio Page Style
 .portfolio-skills-left {
   grid-row: 3 / 4;
   grid-column: 1 / 2;
-  align-self: start;
   padding-top: 15%;
+  text-align: center;
 }
 
 .portfolio-skills-left h2 {
   font-weight: 500;
   font-size: 1.5em;
   color: white;
+  padding-bottom: 2em;
 }
 
 .skills-left {
@@ -171,14 +198,15 @@ Portfolio Page Style
 .portfolio-skills-right {
   grid-row: 3 / 4;
   grid-column: 3 / 4;
-  align-self: start;
   padding-top: 15%;
+  text-align: center;
 }
 
 .portfolio-skills-right h2 {
   font-weight: 500;
   font-size: 1.5em;
   color: white;
+  padding-bottom: 2em;
 }
 
 /******************************************************************************
@@ -188,4 +216,104 @@ Contact Page Style
 .contact-container {
   grid-column: 2 / 7;
   grid-row: 3 / 4;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.contact-about {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-about h2 {
+  color: white;
+}
+
+.contact-about-box {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  background-color: white;
+  margin: 5%;
+}
+
+.contact-find-me {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-find-me h2 {
+  color: white;
+}
+
+.contact-find-me-box {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  background-color: white;
+  margin: 5%;
+  display: flex;
+  overflow: hidden;
+}
+
+.contact {
+  box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+  text-align: center;
+  align-items: center;
+  transition: font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11), flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11), background 0.2s;
+  font-size: 20px;
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact > * {
+  margin:0;
+  width: 100%;
+  transition:transform 0.5s;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact > *:first-child { transform: translateY(-100%); }
+.contact.open-active > *:first-child { transform: translateY(0); }
+.contact > *:last-child { transform: translateY(100%); }
+.contact.open-active > *:last-child { transform: translateY(0); }
+
+.contact p:nth-child(2) {
+  font-size: 1em;
+}
+
+.contact.open {
+  font-size:40px;
+  flex: 3;
+}
+
+.contact-github {
+  background-image: url('https://arcaneiceman.github.io/img/mark-github-256.png');
+}
+
+.contact-linkedin {
+  background-image: url('https://techspective.net/wp-content/uploads/2016/06/LinkedIn.jpg');
+}
+
+.contact-instagram {
+  background-image: url('http://is4.mzstatic.com/image/thumb/Purple118/v4/be/4f/df/be4fdfbf-4cf3-e41e-173c-42686a7281c9/source/175x175bb.jpg');
+}
+
+footer {
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
+  background-color: white;
 }
