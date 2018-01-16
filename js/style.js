@@ -64,3 +64,29 @@ $('.portfolio-box').hover(function() {
 $('.portfolio-box').hover(function() {
 	$('.portfolio-box p').fadeToggle();
 });
+
+//Splash links
+
+
+$(document).ready(function() {
+	let stickyNavTop = $('.splash-links').offset().top;
+
+	let stickyNav = function() {
+		let scrollTop = $(window).scrollTop();
+	
+
+		if (scrollTop > stickyNavTop) {
+			$('.splash-links').addClass('sticky');
+		} else {
+			$('.splash-links').removeClass('sticky');
+		}
+	};
+	
+	stickyNav();
+
+	$(window).scroll(function() {
+		stickyNav();
+	});
+
+
+});

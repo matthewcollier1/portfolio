@@ -16,6 +16,7 @@ Universal style
 
 body{
     font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
   }
   
   *, *:before, *:after {
@@ -36,6 +37,25 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
   
+  }
+
+  .topThird {
+    grid-row: 1 / 2;
+    grid-column: 1 / 8;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-bottom: 5px solid white;
+  }
+  .secondThird {
+    grid-row: 2 / 3;
+    grid-column: 1 / 8;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-bottom: 5px solid white;
+  }
+  .bottomThird {
+    grid-row: 3 / 4;
+    grid-column: 1 / 8;
+    background-color: rgba(255, 255, 255, 0.25);
+
   }
   
   #top-of-page {
@@ -66,17 +86,16 @@ body{
     justify-items: center;
     align-items: center;
     grid-row-gap: 20px;
+    height: 100vh;
   }
   
   .splash-page-icon {
-    grid-column: 7 / 8;
     display: flex;
     justify-content: flex-end;
-    padding-right: 10%;
     
       img {
-        height: 3em;
-        width: 3em;
+        height: 7em;
+        width: 7em;
         position: fixed;
     }
   }
@@ -135,6 +154,19 @@ body{
             }
           }
   }
+
+  .sticky {
+    position: fixed;
+  
+      ul {
+        flex-direction: column;
+        margin-left: -24rem;
+      }
+
+        li {
+          border: none;
+        }
+  }
   
   
   /******************************************************************************
@@ -149,6 +181,7 @@ body{
     grid-template-rows: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
+    height: 100vh;
   }
   
   .portfolio-title {
@@ -212,23 +245,84 @@ body{
   }
 }
   
-  .skills-left {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .portfolio-skills-right {
-    grid-row: 3 / 4;
-    grid-column: 3 / 4;
-    padding-top: 15%;
-    text-align: center;
-    
-      h2 {
-        font-weight: 500;
-        font-size: 1.5em;
-        color: white;
-        padding-bottom: 2em;
-  }
+
+.skillsContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4rem;
+  grid-column: 1 / 4;
+  grid-row: 3;
+}
+
+.skillsItem {
+  width: 20%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.skillsItem h4 {
+  color: white;
+}
+
+.skillsIcon {
+  width: 6.5rem;
+  height: 6.5rem;
+  border: 0.3rem solid #aaaaaa7c;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; 
+  -webkit-box-pack: center; 
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.skillsIcon i:hover {
+  color:rgb(226, 221, 221);
+}
+
+.skillsIcon i, .skillsIcon img, .skillsIcon span {
+  width: 6rem;
+  font-size: 6rem;
+  margin: 0 auto;
+  display: block;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  color:#c5c5c5
 }
   
   /******************************************************************************
@@ -241,6 +335,7 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    height: 100vh;
   }
   
   .contact-about {
@@ -251,7 +346,9 @@ body{
     align-items: center;
     
       h2 {
-        color: white;
+        color: $main-grey;
+        font-weight: 300;
+        font-size: 2em;
   }
 }
   
@@ -287,7 +384,9 @@ body{
     @include container-flex();
     
       h2 {
-        color: white;
+        color: $main-grey;
+        font-weight: 300;
+        font-size: 2em;
   }
 }
 
