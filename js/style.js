@@ -1,4 +1,4 @@
-// Scroll Function
+// Smooth Scroll Function
 
 $(document).ready(function(){
 	// Add smooth scrolling to all links
@@ -43,6 +43,9 @@ contact.forEach(contactinfo => contactinfo.addEventListener('click', toggleOpen)
 contact.forEach(contactinfo => contactinfo.addEventListener('transitionend', toggleActive));
 //for each thing within the contact class, anything we've selected. we are now listening for someone to click. when they do it will fire the toggleOpen function we wrote. When the transition has finished it will fire the toggle active class we have made.
 
+
+//Opacity change scroll
+
 let lastScrollTop = 0;
 
 $(window).scroll(function() {
@@ -55,17 +58,7 @@ $(window).scroll(function() {
 	lastScrollTop = st;
 });
 
-
-$('.portfolio-box').hover(function() {
-	$('.portfolio-example').fadeToggle('slow', 'linear').css('border', '4px solid blue');
-	
-});
-
-$('.portfolio-box').hover(function() {
-	$('.portfolio-box p').fadeToggle();
-});
-
-//Splash links
+//Splash links - sticky nav
 
 
 $(document).ready(function() {
@@ -87,6 +80,5 @@ $(document).ready(function() {
 	$(window).scroll(function() {
 		stickyNav();
 	});
-
-
 });
+

@@ -13,6 +13,9 @@ $main-grey: rgb(140, 127, 127);
 /*****************************************************************************
 Universal style
 *****************************************************************************/
+html {
+  font-size: 16px;
+}
 
 body{
     font-family: 'Raleway', sans-serif;
@@ -35,26 +38,24 @@ body{
     width: 100vw;
     background-image: url(../images/background.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100vw 200vh;
   
   }
 
   .topThird {
     grid-row: 1 / 2;
     grid-column: 1 / 8;
-    background-color: rgba(255, 255, 255, 0.25);
     border-bottom: 5px solid white;
   }
   .secondThird {
     grid-row: 2 / 3;
     grid-column: 1 / 8;
-    background-color: rgba(255, 255, 255, 0.25);
     border-bottom: 5px solid white;
   }
   .bottomThird {
     grid-row: 3 / 4;
     grid-column: 1 / 8;
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgb(228, 139, 139);
 
   }
   
@@ -63,13 +64,10 @@ body{
   }
   
   #scroll-to-top {
+    display: flex;
     position: fixed;
     right: 0;
     bottom: 0;
-    height: 100px;
-    width: 100px;
-    @include container-flex();
-    background-color: black;
     opacity: 1;
   }
   
@@ -94,9 +92,10 @@ body{
     justify-content: flex-end;
     
       img {
-        height: 7em;
-        width: 7em;
+        height: 4em;
+        width: 4em;
         position: fixed;
+        padding: 0.5rem;
     }
   }
   
@@ -191,7 +190,8 @@ body{
       h2 {
         font-weight: 500;
         font-size: 1.5em;
-        color: $main-grey;
+        padding-top: 10rem;
+        color: rgb(220, 220, 220);
   }
 }
 
@@ -211,12 +211,16 @@ body{
     display: flex;
     justify-content: center;
     
-      .portfolio-example {
-        height: 100%;
-        width: 100%;
-        background-color: red;
-        display: none;
-  }
+}
+
+.portfolio-example {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  display: none;
+    &:hover {
+      display: inline-block;
+    }
 }
   
   .box-one {
@@ -322,7 +326,7 @@ body{
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  color:#c5c5c5
+  color:white;
 }
   
   /******************************************************************************
@@ -342,8 +346,9 @@ body{
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    flex-direction: column;
     
       h2 {
         color: $main-grey;
@@ -358,30 +363,43 @@ body{
     grid-row: 2 / 3;
     background-color: rgba(255, 255, 255, 0.1);
     margin: 3% 0;
+    outline: 2px solid #806a6abf;
+    outline-offset: -87px;
     transition: all 1s ease-in;
         &:hover {
             background-color: rgba(255, 255, 255, 0.4);
             transform: scale(1.03);
         }
 
-      img {
-          height: 100%;
-          width: 30%;
-      }
         h2 {
             font-weight: 600;
+            border-left: 1px solid black;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
         }
             p {
                 font-family: 'Playfair Display', serif;
                 padding-top: 10%;
+                border-top: 1px solid black;
+                border-right: 1px solid black;
+                border-bottom: 1px solid black;
 
             }
+  }
+
+  .photo {
+    background-image: url('../images/unnamed.jpg');
+    width: 100%;
+    height: 100%;
+    background-position: 49% 61%;
   }
   
   .contact-find-me {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
     @include container-flex();
+    justify-content: space-evenly;
+    flex-direction: column;
     
       h2 {
         color: $main-grey;
@@ -393,14 +411,12 @@ body{
   .contact-find-me-box {
     grid-column: 3 / 4;
     grid-row: 2 / 3;
-    background-color: white;
     margin: 5%;
     display: flex;
     overflow: hidden;
   }
   
   .contact {
-    box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
     text-align: center;
     align-items: center;
     transition: font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11), flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11), background 0.2s;
@@ -410,13 +426,32 @@ body{
     flex: 1;
     @include container-flex();
     flex-direction: column;
+  
+    img {
+      padding-bottom: 1rem;
+    }
+  }
+
+  .contact p {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact i {
+    font-size: 4rem;
+    padding-bottom: 1rem;
+  }
+
+  .contact a {
+    text-decoration: none;
+    color: #cac5c5;
   }
   
   .contact > * {
     margin:0;
     width: 100%;
     transition:transform 0.5s;
-    flex: 1 0 auto;
+    flex: 3 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -428,29 +463,29 @@ body{
   .contact.open-active > *:last-child { transform: translateY(0); }
   
   .contact p:nth-child(2) {
-    font-size: 1em;
+    font-size: 1rem;
   }
   
   .contact.open {
     font-size:40px;
-    flex: 3;
-  }
-  
-  .contact-github {
-    background-image: url('https://arcaneiceman.github.io/img/mark-github-256.png');
-  }
-  
-  .contact-linkedin {
-    background-image: url('https://techspective.net/wp-content/uploads/2016/06/LinkedIn.jpg');
-  }
-  
-  .contact-instagram {
-    background-image: url('http://is4.mzstatic.com/image/thumb/Purple118/v4/be/4f/df/be4fdfbf-4cf3-e41e-173c-42686a7281c9/source/175x175bb.jpg');
+    flex: 4;
   }
   
   footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     grid-column: 1 / 4;
     grid-row: 3 / 4;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.07);
+    align-self: flex-end;
+    height: 10%;
+    font-family: 'Playfair Display', serif;
+    text-transform: none;
+
+      img {
+        height: 17px;
+        padding-right: 1rem;
+      }
   }
   
