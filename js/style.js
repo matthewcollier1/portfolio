@@ -60,7 +60,7 @@ $(window).scroll(function() {
 
 //Splash links - sticky nav
 
-
+/* 
 $(document).ready(function() {
 	let stickyNavTop = $('.splash-links').offset().top;
 
@@ -80,5 +80,26 @@ $(document).ready(function() {
 	$(window).scroll(function() {
 		stickyNav();
 	});
-});
+}); */
 
+// Portfolio box toggle
+
+$('.examples').hide();
+
+$('.but-one').click(function(){
+	$('#portfolio-example-one').slideToggle(1000, function(){
+
+	});
+}); 
+
+$('.but-two').click(function(){
+	$('#portfolio-example-two').slideToggle(1000, function(){
+
+	});
+}); 
+
+$('.but-three').click(function(){
+	$('#portfolio-example-three').slideToggle(1000, function(){
+
+	});
+});  

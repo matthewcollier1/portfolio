@@ -1,0 +1,169 @@
+@import 'mixins';
+
+/******************************************************************************
+  Contact Page Style
+  ******************************************************************************/
+  
+  .contact-container {
+    grid-column: 1 / 8;
+    grid-row: 3 / 4;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 100vh;
+  }
+  
+  .contact-about {
+    grid-column: 2 / 5;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    
+      h2 {
+        color: gainsboro;
+        font-weight: 500;
+        font-size: 2.5em;
+  }
+}
+  
+  .contact-about-box {
+    display: flex;
+    grid-column: 2 / 6;
+    grid-row: 2 / 3;
+    background-color: rgba(255, 255, 255, 0.01);
+    margin: 3% 0;
+    transition: all 1s ease-in;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: scale(1.03);
+        }
+
+        h2 {
+            font-weight: 400;
+            flex: 0;
+           /*  border-left: 1px solid black;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black; */
+        }
+            p {
+                font-family: 'Playfair Display', serif;
+                text-transform: none;
+                padding-top: 10%;
+                padding-right: 2%;
+               /*  border-top: 1px solid black;
+                border-right: 1px solid black;
+                border-bottom: 1px solid black; */
+                text-align: center;
+                flex: 3;
+
+            }
+  }
+
+  .photo {
+    background-image: url('../images/unnamed.jpg');
+    background-position: 49% 61%;
+    flex: 2;
+  }
+  
+  .contact-find-me {
+    grid-column: 7 / 9;
+    grid-row: 1 / 2;
+    @include container-flex();
+    justify-content: space-evenly;
+    flex-direction: column;
+    
+      h2 {
+        color: gainsboro;
+        font-weight: 500;
+        font-size: 2.5em;
+  }
+}
+
+  .contact-find-me-box {
+    grid-column: 6 / 10;
+    grid-row: 2 / 3;
+    margin: 5%;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .contact {
+    text-align: center;
+    align-items: center;
+    transition: font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11), flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11), background 0.2s;
+    font-size: 20px;
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    @include container-flex();
+    flex-direction: column;
+  
+    img {
+      padding-bottom: 1rem;
+    }
+  }
+
+  .contact p {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact i {
+    font-size: 4.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .contact a {
+    text-decoration: none;
+    color: #cac5c5;
+  }
+  
+  .contact > * {
+    margin:0;
+    width: 100%;
+    transition:transform 0.5s;
+    flex: 3 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact > *:first-child { transform: translateY(-100%); }
+  .contact.open-active > *:first-child { transform: translateY(0); }
+  .contact > *:last-child { transform: translateY(100%); }
+  .contact.open-active > *:last-child { transform: translateY(0); }
+  
+  .contact p:nth-child(2) {
+    font-size: 1rem;
+  }
+  
+  .contact.open {
+    font-size:40px;
+    flex: 4;
+  }
+  
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: 1 / 10;
+    grid-row: 3 / 4;
+    background-color: rgba(255, 255, 255, 0.07);
+    align-self: flex-end;
+    height: 10%;
+    font-family: 'Playfair Display', serif;
+    text-transform: none;
+
+      h4 {
+        padding-left: 1%;
+        font-weight: 100;
+        color: gainsboro;
+      }
+
+      img {
+        height: 17px;
+        padding-right: 1rem;
+      }
+  }

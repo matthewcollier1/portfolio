@@ -1,18 +1,4 @@
 /* colors */
-/* mixins */
-/*****************************************************************************
-Universal style
-*****************************************************************************/
-html {
-  font-size: 16px; }
-
-body {
-  font-family: 'Raleway', sans-serif;
-  text-transform: uppercase; }
-
-*, *:before, *:after {
-  box-sizing: inherit; }
-
 /*****************************************************************************
 Main Grid Style
 ******************************************************************************/
@@ -39,7 +25,7 @@ Main Grid Style
 .bottomThird {
   grid-row: 3 / 4;
   grid-column: 1 / 8;
-  background-color: #e48b8b; }
+  background-color: #314949; }
 
 #top-of-page {
   top: 0; }
@@ -55,7 +41,7 @@ Main Grid Style
 Splash Page Style
 ******************************************************************************/
 .splash-page-container {
-  grid-column: 3 / 6;
+  grid-column: 1 / 8;
   grid-row: 1 / 2;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -120,10 +106,10 @@ Splash Page Style
     border: none; }
 
 /******************************************************************************
-Portfolio Page Style
-******************************************************************************/
+ Portfolio Page Style
+ ******************************************************************************/
 .portfolio-container {
-  grid-column: 2 / 7;
+  grid-column: 1 / 8;
   grid-row: 2 / 3;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -137,8 +123,7 @@ Portfolio Page Style
   grid-column: 2 / 3; }
   .portfolio-title h2 {
     font-weight: 500;
-    font-size: 1.5em;
-    padding-top: 10rem;
+    font-size: 2.5em;
     color: gainsboro; }
 
 .portfolio-boxes {
@@ -149,29 +134,116 @@ Portfolio Page Style
   height: 100%; }
 
 .portfolio-box {
-  grid-row: 2 / 3;
-  width: 80%;
-  height: 80%;
-  background-color: white;
-  display: flex;
-  justify-content: center; }
-
-.portfolio-example {
-  height: 100%;
-  width: 100%;
-  background-color: red;
-  display: none; }
-  .portfolio-example:hover {
-    display: inline-block; }
+  display: inline-block;
+  position: relative; }
+  .portfolio-box img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    filter: blur(1px) sepia(50%);
+    transition: filter 1s ease-in; }
+    .portfolio-box img:hover {
+      filter: blur(0) sepia(0); }
+  .portfolio-box h2 {
+    padding: 1%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    line-height: 1.2rem;
+    font-weight: 500;
+    background-color: #27393df0;
+    color: #8c7f7f; }
+  .portfolio-box a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 9rem;
+    height: 1rem;
+    font-size: 0.8rem;
+    color: #8c7f7f;
+    text-decoration: none;
+    line-height: 120%; }
+  .portfolio-box button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 8rem;
+    padding: 0.4rem;
+    line-height: 10%;
+    font-family: 'Raleway', sans-serif; }
 
 .box-one {
+  grid-row: 2 / 3;
+  width: 80%;
+  height: 14rem;
+  background-color: white;
   grid-column: 1 / 2; }
 
 .box-two {
+  grid-row: 2 / 3;
+  width: 80%;
+  height: 14rem;
+  background-color: white;
   grid-column: 2 / 3; }
 
 .box-three {
+  grid-row: 2 / 3;
+  width: 80%;
+  height: 14rem;
+  background-color: white;
   grid-column: 3 / 4; }
+
+.examples {
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50%;
+  width: 80%;
+  background-color: #27393d; }
+  .examples h2 {
+    font-weight: 600;
+    text-decoration: underline; }
+  .examples h3 {
+    font-weight: 500; }
+  .examples p {
+    font-family: 'Playfair Display', serif;
+    text-transform: none;
+    margin: 1rem; }
+  .examples span {
+    border: 1px solid black;
+    padding: 0.1rem;
+    margin: 0.1rem; }
+  .examples a {
+    color: #8c7f7f;
+    text-decoration: none; }
+
+.skills-used {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+
+#portfolio-example-one {
+  grid-row: 3 / 3;
+  display: flex;
+  grid-column: 1 / 2;
+  z-index: 1;
+  align-self: flex-start; }
+
+#portfolio-example-two {
+  grid-row: 3 / 3;
+  display: flex;
+  grid-column: 2 / 3;
+  z-index: 1;
+  align-self: flex-start; }
+
+#portfolio-example-three {
+  grid-row: 3 / 3;
+  display: flex;
+  grid-column: 3 / 4;
+  z-index: 1;
+  align-self: flex-start; }
 
 .portfolio-skills-left {
   grid-row: 3 / 4;
@@ -201,6 +273,7 @@ Portfolio Page Style
   -ms-flex-align: center;
   align-items: center;
   margin-top: 4rem;
+  margin-bottom: 4rem;
   grid-column: 1 / 4;
   grid-row: 3; }
 
@@ -219,14 +292,14 @@ Portfolio Page Style
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 5rem; }
+  margin-bottom: -1.5rem; }
 
 .skillsItem h4 {
   color: white; }
 
 .skillsIcon {
-  width: 6.5rem;
-  height: 6.5rem;
+  width: 4.5rem;
+  height: 4.5rem;
   border: 0.3rem solid #aaaaaa7c;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -248,8 +321,8 @@ Portfolio Page Style
   color: #e2dddd; }
 
 .skillsIcon i, .skillsIcon img, .skillsIcon span {
-  width: 6rem;
-  font-size: 6rem;
+  width: 4rem;
+  font-size: 4rem;
   margin: 0 auto;
   display: block;
   -webkit-transform: rotate(-45deg);
@@ -258,60 +331,62 @@ Portfolio Page Style
   color: white; }
 
 /******************************************************************************
-Contact Page Style
-******************************************************************************/
+  Contact Page Style
+  ******************************************************************************/
 .contact-container {
-  grid-column: 2 / 7;
+  grid-column: 1 / 8;
   grid-row: 3 / 4;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(3, 1fr);
   height: 100vh; }
 
 .contact-about {
-  grid-column: 1 / 2;
+  grid-column: 2 / 5;
   grid-row: 1 / 2;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column; }
   .contact-about h2 {
-    color: #8c7f7f;
-    font-weight: 300;
-    font-size: 2em; }
+    color: gainsboro;
+    font-weight: 500;
+    font-size: 2.5em; }
 
 .contact-about-box {
   display: flex;
-  grid-column: 1 / 3;
+  grid-column: 2 / 6;
   grid-row: 2 / 3;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.01);
   margin: 3% 0;
-  outline: 2px solid #806a6abf;
-  outline-offset: -87px;
   transition: all 1s ease-in; }
   .contact-about-box:hover {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.1);
     transform: scale(1.03); }
   .contact-about-box h2 {
-    font-weight: 600;
-    border-left: 1px solid black;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black; }
+    font-weight: 400;
+    flex: 0;
+    /*  border-left: 1px solid black;
+     border-top: 1px solid black;
+     border-bottom: 1px solid black; */ }
   .contact-about-box p {
     font-family: 'Playfair Display', serif;
+    text-transform: none;
     padding-top: 10%;
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black; }
+    padding-right: 2%;
+    /*  border-top: 1px solid black;
+     border-right: 1px solid black;
+     border-bottom: 1px solid black; */
+    text-align: center;
+    flex: 3; }
 
 .photo {
   background-image: url("../images/unnamed.jpg");
-  width: 100%;
-  height: 100%;
-  background-position: 49% 61%; }
+  background-position: 49% 61%;
+  flex: 2; }
 
 .contact-find-me {
-  grid-column: 3 / 4;
+  grid-column: 7 / 9;
   grid-row: 1 / 2;
   display: flex;
   justify-content: center;
@@ -319,12 +394,12 @@ Contact Page Style
   justify-content: space-evenly;
   flex-direction: column; }
   .contact-find-me h2 {
-    color: #8c7f7f;
-    font-weight: 300;
-    font-size: 2em; }
+    color: gainsboro;
+    font-weight: 500;
+    font-size: 2.5em; }
 
 .contact-find-me-box {
-  grid-column: 3 / 4;
+  grid-column: 6 / 10;
   grid-row: 2 / 3;
   margin: 5%;
   display: flex;
@@ -350,7 +425,7 @@ Contact Page Style
   flex-direction: column; }
 
 .contact i {
-  font-size: 4rem;
+  font-size: 4.5rem;
   padding-bottom: 1rem; }
 
 .contact a {
@@ -389,15 +464,32 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  grid-column: 1 / 4;
+  grid-column: 1 / 10;
   grid-row: 3 / 4;
   background-color: rgba(255, 255, 255, 0.07);
   align-self: flex-end;
   height: 10%;
   font-family: 'Playfair Display', serif;
   text-transform: none; }
+  footer h4 {
+    padding-left: 1%;
+    font-weight: 100;
+    color: gainsboro; }
   footer img {
     height: 17px;
     padding-right: 1rem; }
+
+/*****************************************************************************
+Universal style
+*****************************************************************************/
+html {
+  font-size: 16px; }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
 
 /*# sourceMappingURL=style.css.map */

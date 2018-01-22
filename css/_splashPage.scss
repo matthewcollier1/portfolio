@@ -1,0 +1,95 @@
+  /******************************************************************************
+  Splash Page Style
+  ******************************************************************************/
+  
+  .splash-page-container {
+    grid-column: 1 / 8;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    grid-row-gap: 20px;
+    height: 100vh;
+  }
+  
+  .splash-page-icon {
+    display: flex;
+    justify-content: flex-end;
+    
+      img {
+        height: 4em;
+        width: 4em;
+        position: fixed;
+        padding: 0.5rem;
+    }
+  }
+  
+  .splash-title {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    align-self: end;
+    
+      h1 {
+        font-weight: 500;
+        font-size: 2em;
+        color: $main-grey;
+      }
+    }
+  
+  .splash-explanation {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    align-self: start;
+    text-align: center;
+    
+      h2 {
+        font-weight: 500;
+        font-size: 1.5em;
+        color: $main-grey;
+  }
+}
+  
+.splash-links {
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
+  
+
+    ul {
+      display: flex;
+    }
+
+      li {
+        border-right: 1px solid $main-grey;
+        padding: 20px;
+      }
+
+        li:last-child {
+          border-right: 0;
+        }
+
+        a {
+          text-decoration: none;
+          color: $main-grey;
+        }
+          span {
+            transition: all 3s linear;
+            &:hover {
+                font-weight: 900;
+            }
+          }
+  }
+
+  .sticky {
+    position: fixed;
+  
+      ul {
+        flex-direction: column;
+        margin-left: -24rem;
+      }
+
+        li {
+          border: none;
+        }
+  }

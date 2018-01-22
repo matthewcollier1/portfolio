@@ -1,0 +1,44 @@
+  /*****************************************************************************
+  Main Grid Style
+  ******************************************************************************/
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 300vh;
+    width: 100vw;
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 200vh;
+  
+  }
+
+  .topThird {
+    grid-row: 1 / 2;
+    grid-column: 1 / 8;
+    border-bottom: 5px solid white;
+  }
+  .secondThird {
+    grid-row: 2 / 3;
+    grid-column: 1 / 8;
+    border-bottom: 5px solid white;
+  }
+  .bottomThird {
+    grid-row: 3 / 4;
+    grid-column: 1 / 8;
+    background-color: #314949;
+
+  }
+  
+  #top-of-page {
+    top: 0;
+  }
+  
+  #scroll-to-top {
+    display: flex;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+  }

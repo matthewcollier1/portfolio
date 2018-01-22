@@ -1,0 +1,270 @@
+ /******************************************************************************
+  Portfolio Page Style
+  ******************************************************************************/
+  
+  .portfolio-container {
+    grid-column: 1 / 8;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .portfolio-title {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  
+      h2 {
+        font-weight: 500; 
+        font-size: 2.5em;
+        color: rgb(220, 220, 220);
+  }
+}
+
+  .portfolio-boxes {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    border: 2px solid $main-grey;
+    width: 85%;
+    height: 100%;
+  }
+  
+  .portfolio-box {
+   display: inline-block;
+   position: relative;
+      
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        filter: blur(1px) sepia(50%);
+        transition: filter 1s ease-in;
+          &:hover {
+            filter: blur(0) sepia(0);
+          }
+      } 
+        
+        h2 {
+          padding: 1%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          text-align: center;
+          line-height: 1.2rem;
+          font-weight: 500;
+          background-color: #27393df0;
+          color: $main-grey;
+        } 
+
+        a {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 9rem;
+          height: 1rem;
+          font-size: 0.8rem;
+          color: $main-grey;
+          text-decoration: none;
+          line-height: 120%;
+        }
+
+          button {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 8rem;
+            padding: 0.4rem;
+            line-height: 10%;
+            font-family: 'Raleway', sans-serif;
+          }
+  }
+
+
+     
+    
+  .box-one {
+    grid-row: 2 / 3;
+    width: 80%;
+    height: 14rem;
+    background-color: white;
+    grid-column: 1 / 2;
+  }
+  
+  .box-two {
+    grid-row: 2 / 3;
+    width: 80%;
+    height: 14rem;
+    background-color: white;
+    grid-column: 2 / 3;
+  }
+  
+  .box-three {
+    grid-row: 2 / 3;
+    width: 80%;
+    height: 14rem;
+    background-color: white;
+    grid-column: 3 / 4;
+  }
+
+  .examples {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50%;
+    width: 80%;
+    background-color: rgb(39, 57, 61);
+
+      h2 {
+        font-weight: 600;
+        text-decoration: underline;
+      }
+
+        h3 {
+          font-weight: 500;
+        }
+
+          p {
+            font-family: 'Playfair Display', serif;
+            text-transform: none;
+            margin: 1rem;
+          }
+            span {
+              border: 1px solid black;
+              padding: 0.1rem;
+              margin: 0.1rem;
+            }
+              a {
+                color: $main-grey;
+                text-decoration: none;
+              }
+  }
+
+  .skills-used {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  #portfolio-example-one {
+    grid-row: 3 / 3;
+    display: flex;
+    grid-column: 1 / 2;
+    z-index: 1;
+    align-self: flex-start;
+  }
+  
+  #portfolio-example-two {
+    grid-row: 3 / 3;
+    display: flex;
+    grid-column: 2 / 3;
+    z-index: 1;
+    align-self: flex-start;
+  }
+  
+  #portfolio-example-three {
+    grid-row: 3 / 3;
+    display: flex;
+    grid-column: 3 / 4;
+    z-index: 1;
+    align-self: flex-start;
+  }
+  
+  .portfolio-skills-left {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    padding-top: 15%;
+    text-align: center;
+    
+     h2 {
+      font-weight: 500;
+      font-size: 1.5em;
+      color: white;
+      padding-bottom: 2em;
+  }
+}
+  
+
+.skillsContainer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  grid-column: 1 / 4;
+  grid-row: 3;
+}
+
+.skillsItem {
+  width: 20%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: -1.5rem;
+}
+
+.skillsItem h4 {
+  color: white;
+}
+
+.skillsIcon {
+  width: 4.5rem;
+  height: 4.5rem;
+  border: 0.3rem solid #aaaaaa7c;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; 
+  -webkit-box-pack: center; 
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.skillsIcon i:hover {
+  color:rgb(226, 221, 221);
+}
+
+.skillsIcon i, .skillsIcon img, .skillsIcon span {
+  width: 4rem;
+  font-size: 4rem;
+  margin: 0 auto;
+  display: block;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  color:white;
+}
+  
