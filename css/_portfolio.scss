@@ -114,28 +114,32 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 50%;
+    height: 70%;
     width: 80%;
     background-color: rgb(39, 57, 61);
 
       h2 {
         font-weight: 600;
         text-decoration: underline;
+        color: gainsboro;
       }
 
         h3 {
           font-weight: 500;
+          color: gainsboro;
         }
 
           p {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Roboto', sans-serif;
             text-transform: none;
             margin: 1rem;
+            color: $main-grey;
           }
             span {
               border: 1px solid black;
               padding: 0.1rem;
               margin: 0.1rem;
+              color: $main-grey;
             }
               a {
                 color: $main-grey;

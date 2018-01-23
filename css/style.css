@@ -199,22 +199,26 @@ Splash Page Style
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 50%;
+  height: 70%;
   width: 80%;
   background-color: #27393d; }
   .examples h2 {
     font-weight: 600;
-    text-decoration: underline; }
+    text-decoration: underline;
+    color: gainsboro; }
   .examples h3 {
-    font-weight: 500; }
+    font-weight: 500;
+    color: gainsboro; }
   .examples p {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', sans-serif;
     text-transform: none;
-    margin: 1rem; }
+    margin: 1rem;
+    color: #8c7f7f; }
   .examples span {
     border: 1px solid black;
     padding: 0.1rem;
-    margin: 0.1rem; }
+    margin: 0.1rem;
+    color: #8c7f7f; }
   .examples a {
     color: #8c7f7f;
     text-decoration: none; }
@@ -366,11 +370,13 @@ Splash Page Style
   .contact-about-box h2 {
     font-weight: 400;
     flex: 0;
+    color: gainsboro;
     /*  border-left: 1px solid black;
      border-top: 1px solid black;
      border-bottom: 1px solid black; */ }
   .contact-about-box p {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', sans-serif;
+    color: gainsboro;
     text-transform: none;
     padding-top: 10%;
     padding-right: 2%;
@@ -378,7 +384,8 @@ Splash Page Style
      border-right: 1px solid black;
      border-bottom: 1px solid black; */
     text-align: center;
-    flex: 3; }
+    flex: 3;
+    line-height: 1.2; }
 
 .photo {
   background-image: url("../images/unnamed.jpg");
@@ -461,21 +468,34 @@ Splash Page Style
   flex: 4; }
 
 footer {
-  display: flex;
   align-items: center;
   grid-column: 1 / 10;
   grid-row: 3 / 4;
   background-color: rgba(255, 255, 255, 0.07);
   height: 100%;
-  font-family: 'Playfair Display', serif;
-  text-transform: none; }
+  font-family: 'Roboto', sans-serif;
+  text-transform: none;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr); }
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  grid-column: 1 / 10; }
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10rem; }
 
 form {
-  margin: 0 auto;
-  width: 400px;
-  padding: 1em;
-  border: 1px solid black;
-  border-radius: 1em; }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; }
+  form h2 {
+    padding-bottom: 1em; }
   form div + div {
     margin-top: 1em; }
   form label {
