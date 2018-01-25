@@ -9,7 +9,6 @@ Main Grid Style
   height: 300vh;
   width: 100vw;
   background-image: url(../images/background.png);
-  background-repeat: no-repeat;
   background-size: 100vw 200vh; }
 
 .topThird {
@@ -66,7 +65,7 @@ Splash Page Style
   align-self: end; }
   .splash-title h1 {
     font-weight: 500;
-    font-size: 2em;
+    font-size: 2.5em;
     color: #8c7f7f; }
 
 .splash-explanation {
@@ -76,7 +75,7 @@ Splash Page Style
   text-align: center; }
   .splash-explanation h2 {
     font-weight: 500;
-    font-size: 1.5em;
+    font-size: 2em;
     color: #8c7f7f; }
 
 .splash-links {
@@ -105,6 +104,9 @@ Splash Page Style
   .sticky li {
     border: none; }
 
+@media screen and (max-width: 370px) {
+  .splash-title h1 {
+    font-size: 2.4em; } }
 /******************************************************************************
  Portfolio Page Style
  ******************************************************************************/
@@ -178,21 +180,18 @@ Splash Page Style
   grid-row: 2 / 3;
   width: 80%;
   height: 14rem;
-  background-color: white;
   grid-column: 1 / 2; }
 
 .box-two {
   grid-row: 2 / 3;
   width: 80%;
   height: 14rem;
-  background-color: white;
   grid-column: 2 / 3; }
 
 .box-three {
   grid-row: 2 / 3;
   width: 80%;
   height: 14rem;
-  background-color: white;
   grid-column: 3 / 4; }
 
 .examples {
@@ -213,14 +212,14 @@ Splash Page Style
     font-family: 'Roboto', sans-serif;
     text-transform: none;
     margin: 1rem;
-    color: #8c7f7f; }
+    color: rgba(220, 220, 220, 0.69); }
   .examples span {
     border: 1px solid black;
     padding: 0.1rem;
     margin: 0.1rem;
     color: #8c7f7f; }
   .examples a {
-    color: #8c7f7f;
+    color: rgba(220, 220, 220, 0.69);
     text-decoration: none; }
 
 .skills-used {
@@ -334,6 +333,68 @@ Splash Page Style
   transform: rotate(-45deg);
   color: white; }
 
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; }
+
+  .portfolio-title h2 {
+    padding-top: 2rem; }
+
+  .portfolio-boxes {
+    display: none; }
+
+  .portfolio-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; }
+
+  .portfolio-box {
+    width: 50%;
+    height: 20%; }
+
+  #portfolio-example-one, #portfolio-example-two, #portfolio-example-three {
+    align-self: center; }
+
+  .examples {
+    width: 50%;
+    height: 25%; }
+
+  .skillsContainer {
+    margin-top: 2rem; }
+
+  .skillsItem {
+    width: 5%;
+    padding: 1rem; }
+    .skillsItem h4 {
+      font-size: 0.6rem;
+      padding-top: 0.9rem; }
+
+  .skillsIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0.1rem solid #aaaaaa7c; }
+    .skillsIcon i {
+      width: 1.5rem;
+      height: 1.5rem;
+      font-size: 1.5rem; } }
+@media screen and (max-width: 370px) {
+  .portfolio-title h2 {
+    font-size: 2.3em;
+    padding-bottom: 1rem; }
+
+  .portfolio-box {
+    display: flex; }
+
+  .portfolio-box a {
+    bottom: 16px;
+    left: 10%; }
+
+  .portfolio-box button {
+    width: 91%; }
+
+  .examples {
+    height: 60%; } }
 /******************************************************************************
   Contact Page Style
   ******************************************************************************/
@@ -361,14 +422,14 @@ Splash Page Style
   display: flex;
   grid-column: 2 / 6;
   grid-row: 2 / 3;
-  background-color: rgba(255, 255, 255, 0.01);
+  /*     background-color: rgba(255, 255, 255, 0.01); */
   margin: 3% 0;
   transition: all 1s ease-in; }
   .contact-about-box:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: scale(1.03); }
+    background-color: rgba(255, 255, 255, 0.01);
+    transform: scale(1.01); }
   .contact-about-box h2 {
-    font-weight: 400;
+    font-weight: 500;
     flex: 0;
     color: gainsboro;
     /*  border-left: 1px solid black;
@@ -489,13 +550,18 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 0 10rem; }
+  .footer-contact h2 {
+    color: gainsboro; }
+  .footer-contact span {
+    color: gainsboro; }
 
 form {
   display: flex;
   flex-direction: column;
   align-items: flex-end; }
   form h2 {
-    padding-bottom: 1em; }
+    padding-bottom: 1em;
+    color: gainsboro; }
   form div + div {
     margin-top: 1em; }
   form label {
@@ -517,6 +583,109 @@ form {
   form button {
     margin-left: 5em; }
 
+label {
+  color: gainsboro; }
+
+@media screen and (max-width: 768px) {
+  .contact-container {
+    display: inline-block;
+    height: 100%; }
+
+  .contact a {
+    font-size: 0.6rem; }
+
+  .contact-about {
+    padding-top: 2rem; }
+
+  .contact-find-me-box {
+    padding: 0 13rem; }
+
+  .contact-about-box {
+    padding: 0 10%;
+    margin: 0; }
+    .contact-about-box h2 {
+      padding: 0 2%; }
+
+  .contact p {
+    justify-content: space-between; }
+
+  .contact img {
+    width: 3rem; }
+
+  .contact i {
+    font-size: 3rem; }
+
+  .contact-find-me h2 {
+    padding-top: 2rem; }
+
+  footer {
+    display: inline-block;
+    height: 26rem;
+    width: 100%; }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%; }
+
+  .footer-contact {
+    height: 60%;
+    flex: 1; }
+
+  form {
+    align-items: center;
+    flex: 1;
+    padding-right: 1rem; }
+
+  form h2 {
+    padding: 0 0 1em 3em; }
+
+  button {
+    padding: 0;
+    text-align: center;
+    margin: 0; } }
+@media screen and (max-width: 370px) {
+  .contact-container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between; }
+
+  .contact-about-box {
+    height: 10%; }
+    .contact-about-box h2 {
+      font-size: x-small; }
+
+  .contact-about h2 {
+    padding-bottom: 1rem; }
+
+  .contact-find-me-box {
+    padding: 0; }
+
+  .contact-about img {
+    display: none; }
+
+  .contact-find-me img {
+    display: none; }
+
+  #contact-hover {
+    font-size: x-small;
+    overflow: scroll; }
+
+  .photo {
+    background-position: 50% 50%; }
+
+  .footer-contact {
+    flex-direction: row;
+    padding: 0 1rem; }
+
+  .footer-contact h2 {
+    width: 16%; }
+
+  form {
+    padding: 0 2rem !important; } }
 /*****************************************************************************
 Universal style
 *****************************************************************************/

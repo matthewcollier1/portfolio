@@ -32,16 +32,16 @@
     display: flex;
     grid-column: 2 / 6;
     grid-row: 2 / 3;
-    background-color: rgba(255, 255, 255, 0.01);
+/*     background-color: rgba(255, 255, 255, 0.01); */
     margin: 3% 0;
     transition: all 1s ease-in;
         &:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            transform: scale(1.03);
+            background-color: rgba(255, 255, 255, 0.01);
+            transform: scale(1.01); 
         }
 
         h2 {
-            font-weight: 400;
+            font-weight: 500;
             flex: 0;
             color: gainsboro;
            /*  border-left: 1px solid black;
@@ -172,6 +172,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 10rem;
+
+      h2 {
+        color: gainsboro;
+      }
+
+        span {
+          color: gainsboro;
+        }
   }
 
   form {
@@ -181,6 +189,7 @@
 
     h2 {
       padding-bottom: 1em;
+      color: gainsboro
     }
 
       div + div {
@@ -219,4 +228,146 @@
                   }
   
 
+label {
+  color: gainsboro;
+}
 
+@media screen and (max-width: 768px) {
+
+  .contact-container {
+    display: inline-block;
+    height: 100%;
+  }
+
+  .contact a {
+    font-size: 0.6rem;
+  }
+
+  .contact-about {
+    padding-top: 2rem;
+  }
+
+  .contact-find-me-box {
+    padding: 0 13rem;
+  }
+
+  .contact-about-box {
+    padding: 0 10%;
+    margin: 0;
+
+      h2 {
+        padding: 0 2%;
+      }
+  }
+
+  .contact p {
+    justify-content: space-between;
+  }
+
+  .contact img {
+    width: 3rem;
+  }
+
+  .contact i {
+    font-size: 3rem;
+  }
+
+  .contact-find-me h2 {
+    padding-top: 2rem;
+  }
+
+  footer {
+    display: inline-block;
+    height: 26rem;
+    width: 100%;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .footer-contact {
+    height: 60%;
+    flex: 1;
+  }
+
+  form {
+    align-items: center;
+    flex: 1;
+    padding-right: 1rem;
+  }
+
+  form h2 {
+    padding: 0 0 1em 3em;
+  }
+
+  button {
+    padding: 0;
+    text-align: center;
+    margin: 0;
+  }
+
+
+}
+
+@media screen and (max-width: 370px) {
+  
+  
+  .contact-container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .contact-about-box {
+    height: 10%;
+
+      h2 {
+        font-size: x-small;
+      }
+  }
+
+  .contact-about h2 {
+    padding-bottom: 1rem;
+  }
+
+  .contact-find-me-box {
+    padding: 0;
+  }
+
+  .contact-about img {
+    display: none;
+  }
+
+  .contact-find-me img {
+    display: none;
+  }
+
+  #contact-hover {
+    font-size: x-small;
+    overflow: scroll;
+  }
+
+  .photo {
+    background-position: 50% 50%;
+  }
+
+  .footer-contact {
+    flex-direction: row;
+    padding: 0 1rem;
+  }
+
+  .footer-contact h2 {
+    width: 16%;
+  }
+
+  form {
+    padding: 0 2rem !important;
+  }
+
+}

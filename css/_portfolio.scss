@@ -90,7 +90,6 @@
     grid-row: 2 / 3;
     width: 80%;
     height: 14rem;
-    background-color: white;
     grid-column: 1 / 2;
   }
   
@@ -98,7 +97,6 @@
     grid-row: 2 / 3;
     width: 80%;
     height: 14rem;
-    background-color: white;
     grid-column: 2 / 3;
   }
   
@@ -106,7 +104,6 @@
     grid-row: 2 / 3;
     width: 80%;
     height: 14rem;
-    background-color: white;
     grid-column: 3 / 4;
   }
 
@@ -133,7 +130,7 @@
             font-family: 'Roboto', sans-serif;
             text-transform: none;
             margin: 1rem;
-            color: $main-grey;
+            color: rgba(220, 220, 220, 0.69);
           }
             span {
               border: 1px solid black;
@@ -142,7 +139,7 @@
               color: $main-grey;
             }
               a {
-                color: $main-grey;
+                color: rgba(220, 220, 220, 0.69);
                 text-decoration: none;
               }
   }
@@ -271,4 +268,92 @@
   transform: rotate(-45deg);
   color:white;
 }
+
+
+@media screen and (max-width: 768px) {
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-title h2 {
+    padding-top: 2rem;
+  }
   
+  .portfolio-boxes {
+    display: none;
+  }
+
+  .portfolio-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .portfolio-box {
+    width: 50%;
+    height: 20%;
+  }
+
+  #portfolio-example-one, #portfolio-example-two, #portfolio-example-three {
+    align-self: center;
+  }
+
+  .examples {
+    width: 50%;
+    height: 25%;
+  }
+
+  .skillsContainer {
+    margin-top: 2rem;
+  }
+
+  .skillsItem {
+    width: 5%;
+    padding: 1rem;
+    
+      h4 {
+       font-size: 0.6rem;
+       padding-top: 0.9rem;
+    }
+  }
+
+  .skillsIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0.1rem solid #aaaaaa7c;
+    
+      i {
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 1.5rem;
+      }
+
+  }
+}
+  
+@media screen and (max-width: 370px) {
+  
+  .portfolio-title h2 {
+    font-size: 2.3em;
+    padding-bottom: 1rem;
+  }
+
+  .portfolio-box {
+    display: flex;
+  }
+
+  .portfolio-box a {
+    bottom: 16px;
+    left: 10%;
+  }
+
+    .portfolio-box button {
+      width: 91%;
+    }
+
+    .examples {
+      height: 60%;
+    }
+}
